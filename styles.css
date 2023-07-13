@@ -1,0 +1,59 @@
+:root {
+    --primary-color: #4a86e8;
+    --secondary-color: #ffffff;
+    --border-color: #dddddd;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--secondary-color);
+}
+
+form#dynamic-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1em;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--secondary-color);
+}
+
+form#dynamic-form div {
+    margin-bottom: 1em;
+}
+
+form#dynamic-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+form#dynamic-form input[type="text"],
+form#dynamic-form select {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+form#dynamic-form input[type="checkbox"],
+form#dynamic-form input[type="radio"] {
+    margin-right: 0.5em;
+}
+
+button {
+    cursor: pointer;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    margin: 0.5em;
+}
+
+button:hover {
+    background-color: rgb(252, 23, 23);
+}

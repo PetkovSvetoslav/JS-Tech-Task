@@ -1,0 +1,71 @@
+The technical task is:
+
+The following json structure (example.json is attached) containing 2 important objects:
+
+1. props which defines selected properties' values
+
+2. meta which defines type of component, values, default value, description and label.
+
+ 
+The task is to present components based on meta data..
+
+The initial state should be the default value as per meta data definition.
+
+Upon selecting new values, they should be updated in props object.
+
+
+Under the form we expect 3 buttons :
+
+     “Set Defaults” – it returns all controls to their default state according to meta.
+
+     “Reset” – it returns all controls to their initial state ( from props)
+
+     “Save” – Which shows (dialog or in html below form) same input json structure, but props represent state of the form.
+
+Example JSON:
+     {
+    props: {
+        styling: "wplay",
+        openTermsInCustomLightbox: "false",
+		promoCodeDisplay: "basic",
+		promoCodeSize: "5",
+    },
+    meta: {
+        styling: {
+            description: "The theme supports several color schemes",
+            type: "dropdown",
+            defaultValue: "winner",
+            values: [
+                { winner: "Winner" },
+                { sunvegas: "SunVegas" },
+                { wplay: "Wplay" },
+            ],
+            label: "Select styling",
+        },
+        openTermsInCustomLightbox: {
+            description:
+                "Hides close button from storeCardCredentials static page and applies popup styles to the scc terms window.",
+            type: "checkbox",
+            defaultValue: "false",
+            label: "Open SCC terms in custom lightbox",
+        },
+		promoCodeDisplay: {
+            description:
+                "Display promo code",
+            type: "radio",
+            defaultValue: "",
+			values: [
+                { basic: "Basic" },
+                { advanced: "Advanced" },
+            ],
+            label: "Display promo code",
+        },
+        promoCodeSize: {
+            description:
+                "Defines the size of the promo code field",
+            type: "input",
+            defaultValue: "",
+            label: "Promo code size",
+        },
+    }
+   }
